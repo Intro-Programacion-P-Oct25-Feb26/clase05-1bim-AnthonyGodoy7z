@@ -24,12 +24,18 @@ public class Ejemplo4 {
         
         System.out.println("Ingrese la ciudad");
         String ciudad = entrada.nextLine(); // Quito
-        //F           or          //F         >>>>> F
+        //Se verifica que la cadena ingresada sea distinta a Loja
         if (ciudad.equals("Loja") || ciudad.equals("Machala") || 
                 ciudad.equals("Guayaquil")) {
             System.out.printf("%s\n", "acceso correcto");
         } else {
             System.out.printf("%s\n", "acceso incorrecto");
+        }
+        
+        int numero = 10;
+        //Se verifica que el numero ingresado no sea diferente a 10
+        if (numero !=10){
+            System.out.println("correcto");
         }
 
     }
