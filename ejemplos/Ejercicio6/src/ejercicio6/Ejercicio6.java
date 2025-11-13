@@ -42,18 +42,20 @@ public class Ejercicio6 {
         System.out.println("Ingrese su dia de pago");
         dia = entrada.nextInt();
         
-        if (dia > 10 && (parroquia.equals("El Valle") || 
+        if (dia <= 10 && (parroquia.equals("El Valle") || 
                 parroquia.equals("El Sagrario"))) {
             descuento = membresia * 0.15;
             total = membresia - descuento;
             System.out.printf("Nombre: %s\nApellido: %s\nEdad: %d\n"
                     + "Parroquia: %s\nDia de pago: %d\nDescuento realizado: %.2f\n"
-                    + "Total a pagar: %.2f", nombre, apellido, edad,
+                    + "Total a pagar: %.2f\n", nombre, apellido, edad,
                     parroquia, dia, descuento, total);
         } else {
+            descuento = 0;
+            total = membresia - descuento;
             System.out.printf("Nombre: %s\nApellido: %s\nEdad: %d\n"
                     + "Parroquia: %s\nDia de pago: %d\n"
-                    + "Total a pagar: %.2f", nombre, apellido, edad,
+                    + "Total a pagar: %.2f\n", nombre, apellido, edad,
                     parroquia, dia, total);
         }
     }
